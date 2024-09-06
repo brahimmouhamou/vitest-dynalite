@@ -63,6 +63,10 @@ export const setupDynamoDB = (createTableInputs: CreateTableInput[]): void => {
       endpoint: `http://localhost:${process.env.TEST_DYNAMODB_PORT}`,
       sslEnabled: false,
       region: 'local',
+      credentials: {
+        accessKeyId: "accessKeyId",
+        secretAccessKey: "secretAccessKey",
+      },
     });
     try {
       await Promise.all(
