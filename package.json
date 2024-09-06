@@ -11,7 +11,7 @@
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
-    "prepare": "husky install",
+    "prepare": "husky install && pnpm build",
     "semantic-release": "semantic-release",
     "test:watch": "vitest",
     "test": "vitest run --coverage",
